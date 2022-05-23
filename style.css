@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #D3D3D3;
+}
+/* AJUSTE DO TAMANHO  */
+.toggle{
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  /* BOX SHADOW ICONE IPHONE */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+              rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+              rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.toggle span{
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #1863ff;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+.toggle span:nth-child(1){
+  transform: translateY(-15px);
+  width: 25px;
+  left: 15px;
+}
+.toggle.active span:nth-child(1){
+  width: 40px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125s;
+}
+.toggle span:nth-child(2){
+  transform: translateY(15px);
+  width: 15px;
+  left: 15px;
+}
+.toggle.active span:nth-child(2){
+  width: 40px;
+  transform: translateY(0px) rotate(315deg);
+  transition-delay: 0.25s;
+}
+.toggle.active span:nth-child(3){
+  transform: translateX(60px);
+}
